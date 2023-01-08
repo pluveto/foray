@@ -1,0 +1,15 @@
+<!-- CSS -->
+<link href="https://unpkg.com/artalk@2.3.4/dist/Artalk.css" rel="stylesheet">
+
+<!-- JS -->
+<script src="https://unpkg.com/artalk@2.3.4/dist/Artalk.js"></script>
+
+<!-- Artalk -->
+<div id="blog-comments"></div>
+<script>
+  new Artalk({
+    el:        '#blog-comments',              // 绑定元素的 Selector
+    server:    '{{ .Site.Params.artalk }}',  // 后端地址
+    site:      'Less Bug',           // 你的站点名
+  })
+</script>

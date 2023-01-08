@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main>
+	<article>
+		<header>
+			<h1>{{ .Title }}</h1>
+		</header>
+		<time datetime="{{ .Date.Format " 2006-01-02T15:04:05" }}">{{ .Date.Format "2006年1月2日 15:04" }} PV: <span
+				id="ArtalkPV">-1</span></time>
+		{{ if .Params.toc }}
+		<aside>
+			<h2>目录</h2>
+			{{ .TableOfContents }}
+		</aside>
+		{{ end }}
+		<div>
+			{{ .Content }}
+		</div>
+		{{ with .Params.tags }}
+		<aside>
+			<ul id="tags">
+				{{ range . }}
+				<li><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+				{{ end }}
+			</ul>
+		</aside>
+		{{ end }}
+		{{ with .Site.DisqusShortname }}
+		<aside>
+			{{ template "_internal/disqus.html" . }}
+		</aside>
+		{{ end }}
+		{{ if isset .Site.Params "artalk" }}
+		<aside>
+			{{ template "_internal/artalk.html" . }}
+		</aside>
+		{{ end }}
+	</article>
+</main>
+{{ partial "sidebar.html" . }}
+{{ end }}

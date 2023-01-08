@@ -1,0 +1,18 @@
+<header id="site-header">
+	<div class="header-logo">
+		<img src="/logo.png">
+		<div class="header-logo--right">
+			<div class="header-logo--site-subtitle">消灭幺蛾子！</div>
+			<a class="header-logo--site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		</div>
+	</div>
+	{{ with .Site.Menus.main }}
+	<nav id="site-nav">
+		<ul>
+			{{ range . }}
+			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+	</nav>
+	{{ end }}
+</header>

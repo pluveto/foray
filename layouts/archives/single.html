@@ -1,0 +1,30 @@
+{{ define "main" }}
+<main>
+    <div class="row">
+        <div class="col-9">
+            <h2>Posts</h2>
+            <div>
+                {{ range (.Site.RegularPages.GroupByDate "2006") }}
+
+                {{ $posts:= (where .Pages "Type" "posts")}}
+
+                {{ if $posts }}
+                <h3>{{ .Key }}</h3>
+                <ul class="archive-list mb-4">
+                    {{ range (where .Pages "Type" "posts") }}
+                    <li>
+                        <span class="archive-list--item-date">{{ .PublishDate.Format "1/2"}}</span>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                    {{- end -}}
+                </ul>
+                {{ end }}
+                {{- end -}}
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+
+</script>
+{{ end }}

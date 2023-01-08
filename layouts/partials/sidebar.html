@@ -1,0 +1,13 @@
+<div>
+	<div>
+		<h3>最近发布</h3>
+	</div>
+	<div>
+		<p>要查看全部文章，请点击右上角“归档”，下面是最近发布的几篇日志</p>
+		<ul>
+			{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+			{{ end }}
+		</ul>
+	</div>
+</div>

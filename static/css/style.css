@@ -199,12 +199,16 @@ article h1 a {
 }
 
 pre {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Source Code Pro", consolas, monospace;
   font-size: 0.9rem;
   background-color: #f0f0f0;
   padding: 1em;
   /* scroll if too long */
   overflow-x: auto;
+}
+
+code {
+  font-family: "Source Code Pro", consolas, monospace;
 }
 
 blockquote {

@@ -4,20 +4,23 @@
 		<header>
 			<h1>{{ .Title }}</h1>
 		</header>
-		<time datetime="{{ .Date.Format " 2006-01-02T15:04:05" }}">{{ .Date.Format "2006年1月2日 15:04" }} PV: <span
-				id="ArtalkPV">-1</span></time>
+		<aside id="meta">
+			Published at <time datetime="{{ .Date.Format " 2006-01-02T15:04:05" }}">{{ .Date.Format "2006/1/2 15:04" }}</time>
+			, <span id="ArtalkPV">...</span> Views
+		</aside>
 		{{ if .Params.toc }}
 		<aside>
 			<h2>目录</h2>
 			{{ .TableOfContents }}
 		</aside>
 		{{ end }}
-		<div>
+		<div id="post-content">
 			{{ .Content }}
 		</div>
 		{{ with .Params.tags }}
-		<aside>
-			<ul id="tags">
+		<aside id="tags" class="flex items-center">
+			<div class="tag-label">Tags &nbsp;</div>
+			<ul class="tag-list">
 				{{ range . }}
 				<li><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 				{{ end }}

@@ -89,11 +89,16 @@ footer ul li {
   margin: 0;
 }
 
-article time {
+article #meta {
   font-size: 0.8rem;
   color: #999;
 }
-
+article #meta time{
+  color: #777;
+}
+.tiny-note {
+  color: #999;
+}
 article h1 {
   margin: 0.5rem 0;
   font-size: 1.8rem;
@@ -118,8 +123,6 @@ article h1 a {
 .row {
   display: flex;
   flex-direction: row;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
 }
 
 .justify-center {
@@ -264,7 +267,49 @@ p img {
   .row {
     flex-direction: column;
   }
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
     max-width: 100%;
   }
+}
+
+#post-content {
+  margin: 0 0 1em 0;
+}
+
+article #tags {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+article #tags ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+article #tags .tag-label {
+  color: #666;
+}
+
+article #tags .tag-list li {
+  background-color: #f0f0f0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+article #tags .tag-list li a {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  color: #445588;
 }

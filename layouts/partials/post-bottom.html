@@ -1,0 +1,45 @@
+<div class="row" style="
+background: #f6faff;
+padding: 1em 2em 2em 2em;
+">
+	<div class="col-4">
+		<div>
+			<h3>最近发布</h3>
+		</div>
+		<div>
+			<p>要查看全部文章，请点击右上角“归档”</p>
+			<ul>
+				{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="tiny-note">({{ .Date.Format "2006/1/2"
+						}})</span> </li>
+				{{ end }}
+			</ul>
+		</div>
+	</div>
+	<div class="col-4">
+		<div>
+			<h3>最受欢迎</h3>
+		</div>
+		<div>
+			<p>如果受欢迎，通常因为需求大而供给不足</p>
+			<ul id="most-views">
+				{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
+	</div>
+	<div class="col-4">
+		<div>
+			<h3>随机文章</h3>
+		</div>
+		<div>
+			<p>请您随便浏览，获取您感兴趣的内容</p>
+			<ul id="rand-pages">
+				{{ range last 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
+	</div>
+</div>

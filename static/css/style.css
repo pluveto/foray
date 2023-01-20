@@ -110,6 +110,18 @@ article h1 a {
   text-decoration: none;
   color: inherit;
 }
+
+/* margin */
+
+.m-0 {
+  margin: 0;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+/* flex */
 .flex {
   display: flex;
 }
@@ -313,3 +325,34 @@ article #tags .tag-list li a {
   text-decoration: none;
   color: #445588;
 }
+
+#ArtalkPV {
+  color: #4458a3
+}
+
+/* table */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+thead {
+  background-color: #445588;
+  color: white;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+

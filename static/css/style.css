@@ -31,7 +31,7 @@ footer ul {
 }
 
 footer ul li:not(:last-child)::after {
-  content: "•";
+  content: "\2022";
   color: #999;
   margin: 0 0.2rem;
 }
@@ -363,4 +363,10 @@ hr {
   background: #f6faff;
   padding: 0.5em 1em 1em 1em;
   margin-top: 1em;
+}
+
+#post-content p code {
+  background: #ffebeb;
+  font-family: "Cascadia Code", "Source Code Pro", consolas, monospace;
+  padding: 0 0.3em;
 }

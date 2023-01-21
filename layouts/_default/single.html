@@ -10,7 +10,7 @@
 			, <span id="ArtalkPV">...</span> Views
 		</aside>
 		{{ if .Params.toc }}
-		<aside>
+		<aside id="toc">
 			<h2>目录</h2>
 			{{ .TableOfContents }}
 		</aside>
@@ -25,12 +25,12 @@
 				<div class="tag-label">Tags &nbsp;</div>
 				<ul class="tag-list">
 					{{ range . }}
-					<li><a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+					<li><a href="{{ " tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 					{{ end }}
 				</ul>
 			</aside>
 			{{ end }}
-			<aside >
+			<aside>
 				<div class="tiny-note">
 					<p class="m-0 mb-4" xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
 							href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"

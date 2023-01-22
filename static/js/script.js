@@ -66,7 +66,8 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         setupTitleSubs();
-        loadMostViews();
-        loadRandomPages();
     }, false);
+
+    loadMostViews();
+    loadRandomPages();
 })()

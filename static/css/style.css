@@ -1,6 +1,7 @@
 html {
   font-size: 14px;
 }
+
 body {
   font-family: Ubuntu, "Noto Sans SC", "Bitstream Vera Sans", "DejaVu Sans",
     Tahoma, sans-serif;
@@ -46,9 +47,11 @@ footer ul li {
   padding: 0.2rem;
   text-decoration: none;
 }
+
 #site-nav ul li a:hover {
   background-color: #f0f0f0;
 }
+
 .header-logo {
   display: flex;
   align-items: center;
@@ -74,9 +77,11 @@ footer ul li {
   text-decoration: none;
   color: inherit;
 }
+
 .homepage {
   display: flex;
 }
+
 .page {
   /* centered */
   max-width: 960px;
@@ -93,16 +98,20 @@ article #meta {
   font-size: 0.8rem;
   color: #999;
 }
+
 article #meta time {
   color: #777;
 }
+
 .tiny-note {
   color: #999;
 }
+
 article h1 {
   margin: 0.5rem 0;
   font-size: 1.8rem;
 }
+
 article h1 a {
   color: #1a1a1a;
   font-weight: 400;
@@ -248,8 +257,7 @@ p {
   margin: 1em 0;
 }
 
-.highlight {
-}
+.highlight {}
 
 footer {
   padding-top: 1rem;
@@ -279,6 +287,7 @@ p img {
   .row {
     flex-direction: column;
   }
+
   .col-1,
   .col-2,
   .col-3,
@@ -303,11 +312,13 @@ article #tags {
   margin: 0 0 1em 0;
   padding: 0;
 }
+
 article #tags ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 article #tags .tag-label {
   color: #666;
 }
@@ -369,4 +380,18 @@ hr {
   background: #ffebeb;
   font-family: "Cascadia Code", "Source Code Pro", consolas, monospace;
   padding: 0 0.3em;
+}
+
+.expand {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.expand-label {
+  user-select: none;
+  font-weight: bold;
+}
+
+.expand-content {
+  margin-top: 0.5rem;
 }

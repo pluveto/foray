@@ -2,8 +2,7 @@
 <details class="expand border p-4">
   <summary class="expand-label select-none" style="cursor: pointer;">
     <span>
-      {{ if .IsNamedParams }}{{.Get "default" | default
-      $expandMessage}}{{else}}{{.Get 0 | default $expandMessage}}{{end}}
+      {{ if .IsNamedParams }}{{.Get "default" | default $expandMessage}}{{else}}{{.Get 0 | default $expandMessage}}{{end}}
     </span>
   </summary>
   <div class="expand-content">

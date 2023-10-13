@@ -10,8 +10,9 @@ padding: 1em 2em 2em 2em;
 			<p>要查看全部文章，请点击右上角“归档”</p>
 			<ul>
 				{{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="tiny-note">({{ .Date.Format "2006/1/2"
-						}})</span> </li>
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+					<span class="tiny-note">({{ .Date.Format "2006/1/2" }})</span>
+				</li>
 				{{ end }}
 			</ul>
 		</div>

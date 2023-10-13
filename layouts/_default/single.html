@@ -5,8 +5,7 @@
 			<h1>{{ .Title }}</h1>
 		</header>
 		<aside id="meta">
-			Published at <time datetime="{{ .Date.Format " 2006-01-02T15:04:05" }}">{{ .Date.Format "2006/1/2 15:04"
-				}}</time>
+			Published at <time datetime="{{ .Date.Format " 2006-01-02T15:04:05" }}">{{ .Date.Format "2006/1/2 15:04"}}</time>
 			, <span id="ArtalkPV">...</span> Views
 		</aside>
 		{{ if .Params.toc }}

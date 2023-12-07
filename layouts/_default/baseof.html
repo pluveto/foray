@@ -18,6 +18,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400;700&display=swap" rel="stylesheet">
+	{{ with .Page }}
+		{{ if eq .Params.mathjax true }}
+			{{ partial "mathjax" . }}
+		{{ end }}
+	{{ end }}
 </head>
 <body>
 	<div class="page">

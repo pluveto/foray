@@ -21,8 +21,9 @@
 		<div>
 			<p>请您随便浏览，获取您感兴趣的内容</p>
 			<ul id="rand-pages">
-				{{ range last 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+				{{ range first 5 (shuffle $pages) }}
+					<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 				{{ end }}
 			</ul>
 		</div>

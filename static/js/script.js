@@ -12,64 +12,64 @@
         })
     }
 
-    const loadMostViews = () => {
-        let url = "https://artalk.cloud.ry.rs/api/stat?type=pv_most_pages&limit=10";
-        let method = "POST"
-        fetch(url, {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        }).then(function (response) {
-            return response.json();
-        }).then(function (data) {
-            let realData = data.data
-            let limit = 5
-            realData = realData.filter(item => item.url.startsWith("/posts")).slice(0, limit)
-            console.log(realData);
-            let html = ""
-            realData.forEach(item => {
-                html += `<li><a href="${item.url}">${item.title}</a> <span class="tiny-note">(${item.pv})</span></li>`
-            })
-            return html
-        }).then(function (html) {
-            const elem = document.querySelector("#most-views");
-            if (elem) elem.innerHTML = html
-        });
-    }
+    // const loadMostViews = () => {
+    //     let url = "https://artalk.cloud.ry.rs/api/stat?type=pv_most_pages&limit=10";
+    //     let method = "POST"
+    //     fetch(url, {
+    //         method: method,
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     }).then(function (response) {
+    //         return response.json();
+    //     }).then(function (data) {
+    //         let realData = data.data
+    //         let limit = 5
+    //         realData = realData.filter(item => item.url.startsWith("/posts")).slice(0, limit)
+    //         console.log(realData);
+    //         let html = ""
+    //         realData.forEach(item => {
+    //             html += `<li><a href="${item.url}">${item.title}</a> <span class="tiny-note">(${item.pv})</span></li>`
+    //         })
+    //         return html
+    //     }).then(function (html) {
+    //         const elem = document.querySelector("#most-views");
+    //         if (elem) elem.innerHTML = html
+    //     });
+    // }
 
-    const loadRandomPages = () => {
-        let url = "https://artalk.cloud.ry.rs/api/stat?type=rand_pages&limit=10";
-        let method = "POST"
-        fetch(url, {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        }).then(function (response) {
-            return response.json();
-        }).then(function (data) {
-            let realData = data.data
-            let limit = 5
-            realData = realData.filter(item => item.url.startsWith("/posts")).slice(0, limit)
-            console.log(realData);
-            let html = ""
-            realData.forEach(item => {
-                html += `<li><a href="${item.url}">${item.title}</a> <span class="tiny-note">(${item.pv})</span></li>`
-            })
-            return html
-        }).then(function (html) {
-            const elem = document.querySelector("#rand-pages");
-            if (elem) elem.innerHTML = html
-        });
-    }
+    // const loadRandomPages = () => {
+    //     let url = "https://artalk.cloud.ry.rs/api/stat?type=rand_pages&limit=10";
+    //     let method = "POST"
+    //     fetch(url, {
+    //         method: method,
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     }).then(function (response) {
+    //         return response.json();
+    //     }).then(function (data) {
+    //         let realData = data.data
+    //         let limit = 5
+    //         realData = realData.filter(item => item.url.startsWith("/posts")).slice(0, limit)
+    //         console.log(realData);
+    //         let html = ""
+    //         realData.forEach(item => {
+    //             html += `<li><a href="${item.url}">${item.title}</a> <span class="tiny-note">(${item.pv})</span></li>`
+    //         })
+    //         return html
+    //     }).then(function (html) {
+    //         const elem = document.querySelector("#rand-pages");
+    //         if (elem) elem.innerHTML = html
+    //     });
+    // }
 
     document.addEventListener('DOMContentLoaded', function () {
         setupTitleSubs();
     }, false);
 
-    loadMostViews();
-    loadRandomPages();
+    // loadMostViews();
+    // loadRandomPages();
 })()
 
 window.toggleExpand = function toggleExpand(who) {

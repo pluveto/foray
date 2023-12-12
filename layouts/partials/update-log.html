@@ -1,10 +1,10 @@
 <div>
     <div>
-        <h3>更新日志</h3>
+        <h3>{{ T "common.changelog"}}</h3>
     </div>
     <div>
         <div>
-            {{ readFile "changelog.md" | markdownify }}
-        </div>
+            {{- $filePath := (printf "/content/%s/changelog.md" site.LanguageCode) -}}
+            {{- readFile $filePath | markdownify -}}        </div>
     </div>
 </div>

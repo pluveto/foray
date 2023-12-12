@@ -5,9 +5,9 @@
         subtitle.addEventListener("click", function () {
             state = !state
             if (state) {
-                subtitle.innerHTML = '消灭幺蛾子！'
+                subtitle.innerHTML = '{{ T "common.lessbug" }}'
             } else {
-                subtitle.innerHTML = '消灭<s>幺蛾子</s>！'
+                subtitle.innerHTML = '{{ T "common.lessbug2" }}'
             }
         })
     }

@@ -1,0 +1,10 @@
+[common]
+recent_posts = "Recent Posts"
+view_all_articles = "To view all articles, please click on the 'Archive' button in the top right corner"
+browse_content = "Feel free to browse and find content that interests you"
+welcome_title = "Welcome"
+random_posts = "Random Posts"
+changelog = "Changelog"
+heatmap = "Heatmap"
+lessbug = "Squash some bugs!"
+lessbug2 = "Squash some <s>bugs</s>!"

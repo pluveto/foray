@@ -1,0 +1,10 @@
+[common]
+recent_posts = "最近发布"
+view_all_articles = "要查看全部文章，请点击右上角“归档”"
+browse_content = "请您随便浏览，获取您感兴趣的内容"
+welcome_title = "欢迎来访"
+random_posts = "随机文章"
+changelog = "更新日志"
+heatmap = "今天摸鱼了吗？"
+lessbug = "消灭幺蛾子！"
+lessbug2 = "消灭<s>幺蛾子</s>！"

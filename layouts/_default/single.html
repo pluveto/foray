@@ -43,6 +43,17 @@
 				</div>
 			</aside>
 		</div>
+		<aside class="flex items-center justify-between">
+			{{ if eq .Type "posts" }}
+			{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+			{{ if $pages.Prev . }}
+				<a href="{{ .Prev.Permalink }}" class="post-link prev">{{ .Prev.Title | truncate 50 "..." }}</a>
+			{{ end }}
+			{{ if $pages.Next . }}
+				<a href="{{ .Next.Permalink }}" class="post-link next">{{ .Next.Title | truncate 50 "..." }}</a>
+			{{ end }}
+			{{ end }}
+		</aside>
 		{{ with .Site.DisqusShortname }}
 		<aside>
 			{{ template "_internal/disqus.html" . }}
@@ -69,8 +80,9 @@
 		crossorigin="anonymous"
 		async>
 		</script>
-
 	</article>
 </main>
-{{ partial "post-bottom.html" . }}
+{{ if eq .Type "posts" }}
+	{{ partial "post-bottom.html" . }}
+{{ end }}
 {{ end }}

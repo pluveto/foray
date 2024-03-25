@@ -43,7 +43,7 @@
 				</div>
 			</aside>
 		</div>
-		<aside class="flex items-center justify-between">
+		<aside class="prev-next-nav flex items-center justify-between">
 			{{ if eq .Type "posts" }}
 			{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 			{{ if $pages.Prev . }}

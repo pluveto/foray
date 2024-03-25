@@ -19,32 +19,3 @@
 	</nav>
 	{{ end }}
 </header>
-<script>
-function changeLanguage(lang, event) {
-	localStorage.setItem('lang', lang);
-
-}
-
-window.onload = function () {
-
-	const browserLang = (navigator.language || navigator.userLanguage).substr(0, 2)
-	const savedLang = localStorage.getItem('lang');
-
-	if (window.location.pathname !== '/') {
-		return;
-	}
-
-	if(savedLang == 'zh') {
-		return;
-	}
-
-	if (window.location.pathname == '/en') {
-		changeLanguage('en');
-		return;
-	}
-
-	const lang = savedLang || browserLang;
-	changeLanguage(lang)
-	window.location.href = '/' + lang;
-}
-</script>

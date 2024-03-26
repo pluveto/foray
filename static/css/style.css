@@ -273,6 +273,7 @@ pre {
   background-color: inherit !important;
   padding: 0;
   margin: 0;
+  overflow: none;
 }
 
 @media (max-width: 767px) {
